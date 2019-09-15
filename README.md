@@ -8,12 +8,13 @@ An eMusic online store which utilizes an MVC layout which calls two external API
 
 When the user clicks on or types the main URL, they are presented with the main page.
  
-The menu has four buttons:
+The menu has the following buttons:
  
   1. Main (home link)
   2. Search Music Title
   3. Login
   4. Shopping Cart (inactive until something is put into it)
+  5. About
  
 ## Search Function
  
@@ -79,6 +80,10 @@ user key???
 After the user submits their purchase, the receipt page will automatically be loaded.
 
 The receipt page displays the sale information and provide a link to allow the user to email the receipt to them.
+
+## About
+
+Display information about the project.  Who the authors are, usage, etc.
 
 ### File Structure
 ```
