@@ -2,7 +2,7 @@
 
 ## Overview
 
-An eMusic online store which utilizes an MVC layout.
+An eMusic online store which utilizes an MVC layout which calls two external apis (LastFM and YouTube), has hooks into a MySql database and is deployed on Heroku.
 
 ### Usage
 
