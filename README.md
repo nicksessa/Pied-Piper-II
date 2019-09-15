@@ -4,23 +4,8 @@
 
 An eMusic online store which utilizes an MVC layout.
 
+### Usage
 
-### File Structure
-```
-├───config
-├───db
-├───models
-├───public
-│   └───assets
-│       ├───css
-│       ├───images
-│       └───js
-├───routes
-│   └───html
-└───views
-    └───layouts 
- ```
- 
 When the user clicks on or types the main URL, they are presented with the main page.
  
 The menu has four buttons:
@@ -87,7 +72,29 @@ After the user submits their purchase, the receipt page will automatically be lo
 
 The receipt page displays the sale information and provide a link to allow the user to email the receipt to them.
 
+### File Structure
+```
+├───config
+├───db
+├───models
+├───public
+│   └───assets
+│       ├───css
+│       ├───images
+│       └───js
+├───routes
+│   └───html
+└───views
+    └───layouts 
+ ```
+ 
+Detailed instructions for the file structure will go here.
 
+
+
+
+
+ 
 ## Notes
 
 There is no way to remove users from the database.  An admin function will have to be added in the future.
