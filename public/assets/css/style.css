@@ -1,0 +1,97 @@
+body {
+  font-family: 'Cardo', serif;
+}
+
+ul {
+  list-style-type: none;  
+}
+
+li {
+  padding: 5px;
+  margin: 5px;
+ /*background: #faebd7;*/
+}
+/*
+.label {
+  font-weight: bold;
+}
+
+.create-update-form {
+  padding: 5px;
+  margin: 5px;
+  background: aqua;
+}
+
+.form-group {
+  margin-bottom: 5px;
+}
+*/
+.container {
+  width: 75%;
+}
+
+#eatItBtn {
+  color: white;
+  /* float: right; */
+}
+
+.jumbotron {
+    background-image: url("/assets/images/Burger.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-top: 10px;
+    
+}
+
+.jumbotron > h1 {
+    font-family: 'Creepster', cursive;
+    font-family: 'Satisfy', cursive;
+}
+
+#newburger {
+    border-radius: 5px;
+}
+
+#color-override {
+    color: #fff;
+}
+
+#burgerReady {
+    background-color: #5cb85c;
+    background-color: red;
+    color: white;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+#eatbutton, #trashbutton {
+    float: right;
+}
+
+#burgerEaten {
+    background-color: #f0ad4e;
+    background-color: #e1ad01;
+    color: white;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.glow {
+  font-size: 50px;
+  color: #fff;
+  /*text-align: center;*/
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+}
