@@ -1,11 +1,16 @@
 ### Schema
 
-CREATE DATABASE burgers_db;
-USE burgers_db;
+CREATE DATABASE piedPiper_db;
+USE piedPiper_db;
 
-CREATE TABLE burgers
+CREATE TABLE sales
 (
 	id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
-	burger_name varchar(255) NOT NULL,
-	devoured BOOLEAN DEFAULT false
+	user_ID varchar(255) not null,
+	user_name varchar(255) NOT NULL,
+	song_title varchar(255) not null,
+	artist_name varchar(255) not null,
+	album_name varchar(255) not null,
+	updated_on TIMESTAMP NOT NULL DEFAULT NOW() ON UPDATE NOW(),
+    created_on TIMESTAMP NOT NULL
 );
