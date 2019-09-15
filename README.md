@@ -2,7 +2,7 @@
 
 ## Overview
 
-An eMusic online store which utilizes an MVC layout which calls two external apis (LastFM and YouTube), has hooks into a MySql database and is deployed on Heroku.
+An eMusic online store which utilizes an MVC layout which calls two external APIs (LastFM and YouTube), has hooks into a MySql database and is deployed on Heroku.
 
 ### Usage
 
@@ -13,7 +13,7 @@ The menu has four buttons:
   1. Main (home link)
   2. Search Music Title
   3. Login
-  4. Shopping Cart
+  4. Shopping Cart (inactive until something is put into it)
  
 #### Search Function
  
@@ -21,18 +21,26 @@ When the user enters a song title in the search window and hits the `Search` but
  1. An AJAX api call is made to LastFM to retrieve song information.
  2. An AJAX api call is made to YouTube to retrieve a link to the video.
  
-The LastFM data is displayed in either a table format or card format with links to the song on LastFM.  Buttons are also added to the songs to add them to the user's Shopping Cart.
+The LastFM data is displayed in either a table format or card format with links to the song on LastFM.  Buttons are also added to the song elements so that they can be added to the user's Shopping Cart.
  
-The YouTube data is displayed in a div with a link to the song on YouTube.
+The YouTube data is displayed in an element with a link to the song on YouTube.
 
 The `Add to Cart` buttons for each song will store the data in Local Storage.
-It stores the Song Title, Artist Name, Album, LastFM ID???, a link to the item on LastFM
+It stores the following information:
+
+Song Title
+Artist Name
+Album
+LastFM ID???
+a link to the item on LastFM
 
 NOTE: Each song title will also be assigned a price of .99 cents!
 
 #### Login
 
-When a user clicks the Login button, it will pop up a modal with login fields.
+When a user clicks the Login button, it will pop up a modal with login fields using this as an example:
+
+https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_login_form_modal
 
 NOTE: The username is the user's email address.
 
