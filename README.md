@@ -4,7 +4,7 @@
 
 An eMusic online store which utilizes an MVC layout which calls two external APIs (LastFM and YouTube), has hooks into a MySql database and is deployed on Heroku.
 
-### Usage
+## Usage
 
 When the user clicks on or types the main URL, they are presented with the main page.
  
@@ -15,7 +15,7 @@ The menu has four buttons:
   3. Login
   4. Shopping Cart (inactive until something is put into it)
  
-#### Search Function
+## Search Function
  
 When the user enters a song title in the search window and hits the `Search` button, several things happen:
  1. An AJAX api call is made to LastFM to retrieve song information.
@@ -36,7 +36,7 @@ a link to the item on LastFM
 
 NOTE: Each song title will also be assigned a price of .99 cents!
 
-#### Login
+## Login
 
 When a user clicks the Login button, it will pop up a modal with login fields using this as an example:
 
@@ -52,7 +52,7 @@ The "Register Now" link allows the user to create a new account which creates ro
 
 Again, the username is the email address and the password will be stored in clear text... for now.
 
-#### Shopping Cart
+## Shopping Cart
 
 When the user clicks on the Shopping Cart button, it routes the user to the Shopping Cart page.  This page is populated with the information stored in the user's Local Storage.
 
