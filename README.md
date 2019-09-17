@@ -101,12 +101,50 @@ Display information about the project.  Who the authors are, usage, etc.
     └───layouts 
  ```
  
-Detailed instructions for the file structure will go here.
+## Routing and Handlebars
 
+At the root, the server.js file requires ./routes which means that it uses the index.js file inside the ./routes directory.
 
+Inside the ./routes/index.js file are the endpoints for the project that are brought in using this statement:
 
+`const htmlRoutes = require("./html")`
 
+and defined using this statement:
 
+`router.use("/", htmlRoutes);`
+
+This means that it uses the file: ./routes/html/htmlRoutes.js
+
+Inside the ./routes/html/htmlRoutes.js file are the actual endpoints for our project.  For example:
+```js
+router
+  .route("/")
+  .get(function (req, res) {
+    res.render("home");
+  });
+
+router
+  .route("/pageone")
+  .get(function (req, res) {
+    res.render("pageOne");
+  });
+
+router
+  .route("/pagetwo")
+  .get(function (req, res) {
+    res.render("pageTwo");
+  });
+```
+
+The pages referenced above ("home", "pageOne", "pageTwo") are found in the ./views directory.
+
+"home" = ./views/home.handlebars
+"pageOne" = ./views/pageOne.handlebars
+"pageTwo" = ./views/pageTwo.handlebars
+
+However, each of these pages need the main.handlebars file in the ./views/layouts/main.handlebars file.
+
+The ./views/layouts/main.handlebars file contains the HTML header section and is used by all the endpoints ("home", "pageOne", "pageTwo").
  
 ## Notes
 
