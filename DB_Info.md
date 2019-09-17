@@ -1,5 +1,11 @@
 # DB Info
 
+## Database
+```sql
+CREATE DATABASE piedPiper_db;
+USE piedPiper_db;
+```
+
 ## Login
 
 From the main page will be a login button.
