@@ -1,9 +1,35 @@
 # DB Info
 
-## Database
+## Database Creation
+
 ```sql
 CREATE DATABASE piedPiper_db;
 USE piedPiper_db;
+```
+
+## Table Creation and Description
+
+```sql
+CREATE TABLE user_table (
+id NOT NULL AUTO_INCREMENT PRIMARY KEY,
+user_name VARCHAR(255) NOT NULL,
+password VARCHAR(50) NOT NULL,
+created_on DATETIME DEFAULT CURRENT_TIMESTAMP,
+last_modified DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE orders_table (
+id NOT NULL AUTO_INCREMENT PRIMARY KEY,
+user_name VARCHAR(255) NOT NULL,
+song_title VARCHAR(255) NOT NULL,
+artist_name VARCHAR(255) NOT NULL,
+album_name VARCHAR(255) NOT NULL,
+link  VARCHAR(255) NOT NULL,
+purchase_date  DATETIME DEFAULT CURRENT_TIMESTAMP,
+purchase_price DECIMAL(5,2),
+created_on DATETIME DEFAULT CURRENT_TIMESTAMP,
+last_modified DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
 ```
 
 ## Login
@@ -11,7 +37,6 @@ USE piedPiper_db;
 From the main page will be a login button.
 
 When the user attempts to log in, a request goes to the database to see if the user exists.
-
 
 ```sql
 SELECT
@@ -95,27 +120,3 @@ WHERE
 
 This data is then displayed in an html table.
 
-
-## Table Creation and Description
-```sql
-CREATE TABLE user_table (
-id NOT NULL AUTO_INCREMENT PRIMARY KEY,
-user_name VARCHAR(255) NOT NULL,
-password VARCHAR(50) NOT NULL,
-created_on DATETIME DEFAULT CURRENT_TIMESTAMP,
-last_modified DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-);
-
-CREATE TABLE orders_table (
-id NOT NULL AUTO_INCREMENT PRIMARY KEY,
-user_name VARCHAR(255) NOT NULL,
-song_title VARCHAR(255) NOT NULL,
-artist_name VARCHAR(255) NOT NULL,
-album_name VARCHAR(255) NOT NULL,
-link  VARCHAR(255) NOT NULL,
-purchase_date  DATETIME DEFAULT CURRENT_TIMESTAMP,
-purchase_price DECIMAL(5,2),
-created_on DATETIME DEFAULT CURRENT_TIMESTAMP,
-last_modified DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-);
-```
