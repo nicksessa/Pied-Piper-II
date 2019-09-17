@@ -49,13 +49,17 @@ AND
   a.user_password = "password123";
 ```
 
+If the user successfully logs in, the `Orders` button/link will become visible/active.
+
+## Logout
+
+Change the `Login` button to a `Logout` button after the user successfully logs in.
+
+Change the `Logout` button to a `Login` button after the user logs out.
+
 ## Registration Page
 
-There is also a register button.
-
-Upon submit, a call is made to the databast to first see if the username already exists.
-
-If not, then the code will create the user.
+A register button/link is available on the `Login` modal window.  It will display a new window/page that will allow the user to input a new name and password.  If the user name does not exist, an insert function call will create the user.
 
 If the user already exists, a message is sent to the user saying as much. 
 
@@ -74,8 +78,8 @@ VALUES
 
 ## Record Orders
 
-After a purchase, the user's sale will be entered into the orders table ONLY if the user is logged in!
-We do not log anonymous sales.
+After a purchase (submit on the Checkout page), the user's sale will be entered into the orders table ONLY if the user is logged in!
+Anonymous sales are NOT logged.
 
 ```sql
 INSERT INTO user_table
@@ -101,7 +105,10 @@ Note: We don't need to insert the purchase_date since it will be set automatical
 
 ## View Orders
 
-The user can view past purchases by clicking on the `Orders` button.
+The user can view past purchases by clicking on the `Orders` button.  The user will be redirected to the `Orders` page which will display all their purchases in an HTML table.
+
+The SQL used:
+
 ```sql
 SELECT
   a.user_name
@@ -118,5 +125,4 @@ WHERE
   a.user_name = b.user_name;
 ```
 
-This data is then displayed in an html table.
 
