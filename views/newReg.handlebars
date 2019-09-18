@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <title>Pied-Piper II</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navBar">
+            <form class="form">
+                <div class="search">
+                    <a id="linkSearch" href="./index.html">PIED PIPER</a>
+                    <input id="inputSearch" type="search" placeholder="Search by Title or Author">
+
+                    <button class="button" id="searchBtn" type="submit"> Search </button>
+                </div>
+                <div class="user">
+                    <div class="user2">
+                        <button class="button" id="loginBtn" type="submit"> Login </button>
+                        <a id="linkUser" href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+                    </div>
+                </div>
+            </form>
+        </nav>
+    </header>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="container">
+                <label for="uname"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="uname" required>
+                <br>
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+                <br>
+                <button class="button" id="submitBtn" type="submit">Login</button>
+                <label>
+                    <input type="checkbox" name="remember"> Remember me
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="submit-box">
+            <label for="newUser"><h2>Insert your Username</h2></label>
+            <input type="text" class="newUser" placeholder="8-22 characters" name="newUser" required>
+            <br>
+            <label for="newPsw"><h2>Enter your password</h2></label>
+            <input type="password" class="newPassword" placeholder="Password is case-sensitive" name="newPsw" required>
+            <br>
+            <button class="button" id="signUpBtn" type="submit">SignUp</button>
+            </div>
+            
+        </div>
+
+</body>
+
+</html>

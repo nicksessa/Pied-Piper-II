@@ -18,6 +18,12 @@ router
     res.render("receiptView");
   });
 
+  router
+  .route("/registration")
+  .get(function(req,res){
+    res.render("newReg")
+  })
+
 // router
 //   .route("/grouppage")
 //   .get(function (req, res) {
