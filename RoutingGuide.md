@@ -46,8 +46,37 @@ File | Imports | File
 * Note: You _can_ use index.js in your ./route folder and you will not have to require it in your server.js file.
         You can then use the index.js file to import the route files in say the ./routes/html directory.
 
+## JavaScript
+
+(./public/assets/js/someJavaScriptFile.js)
+The JavaScript that starts the ball rolling might look something like this:
+
+```js
+$(".create-form").on("submit", function(event) {
+    // Make sure to preventDefault on a submit event.
+    event.preventDefault();
+
+    var newCat = {
+      name: $("#ca").val().trim(),
+      sleepy: $("[name=sleepy]:checked").val().trim()
+    };
+
+    // Send the POST request.
+    $.ajax("/api/cats", {
+      type: "POST",
+      data: newCat
+    }).then(
+      function() {
+        console.log("created new cat");
+        // Reload the page to get the updated list
+        location.reload();
+      }
+    );
+  });
+```
+
 ## Server.js
-This file establishes where your routes are by defining the routes by a variable:
+This file, which resides at the root of the tree, establishes where your routes are by defining the routes by a variable:
 
 ```js
 var routes = require("./routes")
@@ -55,6 +84,7 @@ var routes = require("./routes")
 
 ## Routers
 
+(./routes/someRoute.js)
 Route files contain "end points".
 They define the API functions.
 
@@ -91,6 +121,7 @@ var appNameModel = require("./models/appNameModel.js")
 
 ## Models
 
+(./models/someModel.js)
 Model files have functions that utilize the orm functions.  For example:
 
 ```js
@@ -122,6 +153,7 @@ module.exports = cat;
 
 ## ORM.js 
 
+(./config/orm.js)
 The ORM files contain the SQL statements which are encapsulated in an "orm" object:
 
 ```js
@@ -139,6 +171,7 @@ var orm = {
 
 ## Connection.js
 
+(./config/connnection.js)
 The connection.js file contains the DB connection information.
 
 ```js
