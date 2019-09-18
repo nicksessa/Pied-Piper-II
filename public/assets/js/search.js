@@ -88,9 +88,11 @@ $("#searchBtn").on("click", function (event) {
 
         var newSongTitle = $(songTitle).text()
         newSongTitle = newSongTitle.split(' ').join('+');
+        var newArtistName = $(artistName).text();
+        newArtistName = newArtistName.split(' ').join('+');
 
         var youTubeApiKey = "AIzaSyBdKCyg7sttppX9lC9j18Rpdz99RddVhXA"
-        var queryURL = " https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=" + newSongTitle + "&topicId=%2Fm%2F04rlf&type=video&key=" + youTubeApiKey;
+        var queryURL = " https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=" + newSongTitle + newArtistName + "&topicId=%2Fm%2F04rlf&type=video&key=" + youTubeApiKey;
         console.log("youTube URL: " + queryURL)
         
         $.ajax({
