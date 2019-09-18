@@ -32,17 +32,16 @@ We start with the things that call other things.  In this case, the beginning (b
 
 This file (or files):
 
-./public/assets/js/[someScript.js]
+`./public/assets/js/[someScript.js]`
 
 creates API calls that are caught by the router or routers.
 
-./server.js              -->  IMPORTS  -->  ./route/[someRouter.js]  *
-
-./routes/[someRouter.js] -->  IMPORTS  -->  ./models/[someModel.js]
-
-./models/[someModel.js]  -->  IMPORTS  -->  .config/orm.js
-
-./config/orm.js          -->  IMPORTS  -->  ./config/connection.js
+File | Imports | File
+-----|---------|------
+./server.js | -->  IMPORTS  --> | ./route/[someRouter.js]  *
+./routes/[someRouter.js] | -->  IMPORTS  --> | ./models/[someModel.js]
+./models/[someModel.js] | -->  IMPORTS  --> | .config/orm.js
+./config/orm.js  | -->  IMPORTS  --> | ./config/connection.js
 
 * Note: You _can_ use index.js in your ./route folder and you will not have to require it in your server.js file.
         You can then use the index.js file to import the route files in say the ./routes/html directory.
