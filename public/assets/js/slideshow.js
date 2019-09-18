@@ -1,4 +1,6 @@
+
     //--------------------------SLIDESHOW--------------------------//
+
     var slideIndex = 0;
 
     function showSlides() {
@@ -13,3 +15,4 @@
         setTimeout(showSlides, 5000); // Change image every 5 seconds
     }
     showSlides();
+
