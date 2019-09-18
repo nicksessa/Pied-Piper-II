@@ -3,7 +3,6 @@
 Whenever I get stuck, I find it useful to do like Vizzini in the Princess Bride said to do, and to go back to the beginning.
 
 > In the beginning...  
-- Genesis 1
 
 Assume the following structure:
 ```
