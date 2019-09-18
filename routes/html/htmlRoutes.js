@@ -18,6 +18,12 @@ router
     res.render("receiptView");
   });
 
+  router
+  .route("/registration")
+  .get(function (req, res) {
+    res.render("newReg");
+  });
+
 
 router.post("/api/login", function(req, res) {
   var user_name = req.body.user_name
