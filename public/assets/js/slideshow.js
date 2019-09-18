@@ -1,5 +1,6 @@
 
     //--------------------------SLIDESHOW--------------------------//
+$(document).ready(function () {
 
     var slideIndex = 0;
 
@@ -16,3 +17,4 @@
     }
     showSlides();
 
+})
