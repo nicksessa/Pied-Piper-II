@@ -1,8 +1,13 @@
+<<<<<<< HEAD
 $(document).ready(function(){
+=======
+$(document).ready(function() {
+>>>>>>> f28844d741aaef8a71d988475e8d2cf77eeb2ca8
   $("#loginBtn").on("click", function(){
     event.preventDefault();
     $("#myModal").css('display', 'block');
   });
+<<<<<<< HEAD
   
   
   
@@ -16,5 +21,14 @@ $(document).ready(function(){
 
 
 
+=======
+  $(".close").on("click", function(){
+    $("#myModal").css('display', 'none')
+  });
+});
+
+
+
+>>>>>>> f28844d741aaef8a71d988475e8d2cf77eeb2ca8
 
 
