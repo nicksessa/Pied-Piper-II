@@ -42,27 +42,19 @@
   .close {
     color: white;
     float: right;
-    font-size: 28px;
+    font-size: 56px;
     font-weight: bold;
+    padding-left: 100px;
   }
   
   .close:hover,
   .close:focus{
-    color: #000;
+    color: orangered;
     text-decoration: none;
     cursor: pointer;
   }
-  
-  .modal-header {
-    padding: 2px 16px;
-    background-color:orangered;
-    color: white;
+
+  #reg-div{
+    margin-top: 20px;
   }
   
-  .modal-body {padding: 2px 16px;}
-  
-  .modal-footer {
-    padding: 2px 16px;
-    background-color: orangered;
-    color: white;
-  }

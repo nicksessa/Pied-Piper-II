@@ -13,7 +13,7 @@ The menu has the following buttons:
   1. Main (home link)
   2. Search Music Title
   3. Login
-  4. Shopping Cart (inactive until something is put into it)
+  4. Shopping Cart
   5. About
  
 ## Search Function
@@ -56,6 +56,8 @@ Again, the username is the email address and the password will be stored in clea
 ## Shopping Cart
 
 When the user clicks on the Shopping Cart button, it routes the user to the Shopping Cart page.  This page is populated with the information stored in the user's Local Storage.
+
+NOTE: The cart page will display an empty cart if there are no items in it.
 
 It also displays the total sale price of all the items.
 
