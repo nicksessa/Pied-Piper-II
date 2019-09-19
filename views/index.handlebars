@@ -4,11 +4,16 @@
         <nav class="navBar">
             <form class="form">
                 <div class="search">
-                    <a id="linkSearch" href="./index.html">PIED PIPER</a>
+                    <a id="linkSearch" href="./index.handlebars">PIED PIPER</a>
                     <input id="inputSearch" type="search" placeholder="Search by Title or Author">
-
                     <button class="button" id="searchBtn" type="submit"> Search </button>
                 </div>
+
+                    <div class="about">
+                        <button class="button" id="about" type="submit" style="background-color: grey"> About </button>
+                        <a id="aboutlink" href="./about.handlebars"></a>
+                    </div>
+                
                 <div class="user">
                     <div class="user2">
                         <button class="button" id="loginBtn" type="submit"> Login </button>
@@ -22,13 +27,13 @@
         <div class="modal-content">
             <span class="close">&times;</span>
             <div class="container">
-                <label for="uname"><b>Username</b></label>
-                <input type="text" placeholder="Enter Username" name="uname" required>
+                <label for="uname" ><b>Username</b></label>
+                <input type="text" id="userName" placeholder="Enter Username" name="uname" required>
                 <br>
                 <label for="psw"><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" name="psw" required>
+                <input type="password" id="password" placeholder="Enter Password" name="psw" required>
                 <br>
-                <button class="button" id="loginBtn" type="submit">Login</button>
+                <button class="button" id="modalLoginBtn" type="submit">Login</button>
                 <label>
                     <input type="checkbox" name="remember"> Remember me
                 </label>

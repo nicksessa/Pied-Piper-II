@@ -54,6 +54,7 @@ body {
     background-color: #b92626;
     border-radius: 15px;
 }
+
     /* SEARCH */
     .search {
         flex:5;
@@ -70,6 +71,20 @@ body {
     #linksearch:hover {
         color: rgb(241, 178, 95);
     }
+    #aboutLink {
+        text-decoration: none;
+        background-color: gray;
+        color: antiquewhite;
+        font-size: 23px;
+        font-family: 'Oswald', sans-serif;
+        letter-spacing: 2px;
+        padding: 0px 0px 0px 15px;
+        margin-top: 50px;
+    }
+    #aboutLink:hover {
+        color: rgb(63, 61, 61);
+    }
+
     #inputSearch {
         height: 30px;
         margin: 10px;
