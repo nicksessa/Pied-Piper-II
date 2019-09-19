@@ -89,6 +89,9 @@ app.get("/", function(req, res) {
 
 13. Finally, go in your browser to the URL listed under the Heroku Domain. If all went well you should see your website!
 
+## Heroku and MySql
+
+https://drive.google.com/uc?export=view&id=1xqMlcVxj4u0A5U72qdLb1269ogfmG1Vy
 
 ### Troubleshooting
 
