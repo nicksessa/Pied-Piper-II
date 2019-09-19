@@ -42,7 +42,7 @@ When the user attempts to log in, a request goes to the database to see if the u
 SELECT
   a.user_name 
 FROM
-  user_table a
+  users a
 WHERE
   a.user_name = "somebody@somewhere.com"
 AND
@@ -64,7 +64,7 @@ A register button/link is available on the `Login` modal window.  It will displa
 If the user already exists, a message is sent to the user saying as much. 
 
 ```sql
-INSERT INTO user_table
+INSERT INTO users
 (
   'user_name',
   'password'
@@ -82,7 +82,7 @@ After a purchase (submit on the Checkout page), the user's sale will be entered 
 Anonymous sales are NOT logged.
 
 ```sql
-INSERT INTO user_table
+INSERT INTO orders
 (
   'user_name', 
   'song_title', 
@@ -119,8 +119,8 @@ SELECT
   b.purchase_date
   b.purchase_price
 FROM
-  user_table a,
-  orders_table b
+  users a,
+  orders b
 WHERE
   a.user_name = b.user_name;
 ```
