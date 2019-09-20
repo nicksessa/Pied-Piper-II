@@ -88,6 +88,7 @@ $(document).ready(function () {
                     Artist: (artistList[cartAttr]).split('+').join(' '),
                     Album: (albumList[cartAttr]).split('+').join(' '),
                 })
+
                 // console.log(arrayCart)
 
                 for (var j = 0; j < arrayCart.length; j++) {
