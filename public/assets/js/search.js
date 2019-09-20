@@ -75,6 +75,21 @@ $("#searchBtn").on("click", function (event) {
                     albumList.push(albumName)
                 });
             }
+            $(document).on("click", ".linkBtn2", function (event) {
+                console.log("You clicked cart Btn");
+
+                var cartAttr = $(this).data().id;
+
+                arrayCart.push({
+                    Song: (trackList[cartAttr]).split('+').join(' '),
+                    Artist: (artistList[cartAttr]).split('+').join(' '),
+                    Album: (albumList[cartAttr]).split('+').join(' '),
+                })
+                console.log(arrayCart)
+
+                // localStorage.setItem("piedPiperCart1284", JSON.stringify(arrayCart));
+                // console.log(storage)
+            })
         })
     })
 

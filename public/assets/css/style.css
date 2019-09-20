@@ -4,17 +4,10 @@ body {
     margin: auto;
     margin-top: 10px;
     margin-bottom: 20px;
-<<<<<<< HEAD
-    background-image: url("/assets/images/body.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    /* background-color: rgb(39, 39, 39);; */
-=======
     background-image: url("/images/body.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: rgb(39, 39, 39);;
->>>>>>> e0ef80863f282d7076f0300191783aff348e0764
+    /* background-color: rgb(39, 39, 39);; */
 }
 
 /* NAVBAR */
@@ -273,4 +266,24 @@ span.password {
     background-color: rgb(31, 30, 30);
     color: white;
 }
-
+.footer {
+    height: 100px;
+        border-top: 4px solid rgb(255, 170, 66);
+        padding: 25px;
+        background-color: rgb(63, 62, 62);
+        color: antiquewhite;
+        font-size: 12px;
+        font-size: 15px;
+        width: 100%;
+        display: inline-block;
+}
+.footer a {
+    text-decoration: none;
+    color: antiquewhite;
+}
+.footer a:hover {
+    color: rgb(255, 170, 66);
+}
+.span {
+    color: #f4511e;
+}
