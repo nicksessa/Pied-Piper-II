@@ -4,10 +4,10 @@ body {
     margin: auto;
     margin-top: 10px;
     margin-bottom: 20px;
-    /* background-image: url("/images/body.jpg");
+    background-image: url("/assets/images/body.jpg");
     background-repeat: no-repeat;
-    background-size: cover; */
-    background-color: rgb(39, 39, 39);;
+    background-size: cover;
+    /* background-color: rgb(39, 39, 39);; */
 }
 
 /* NAVBAR */
