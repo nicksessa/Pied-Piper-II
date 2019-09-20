@@ -50,7 +50,23 @@ body {
     text-align: center;
     padding-top: 10px;
 }
-.button:hover, .linkBtn:hover, .youtubeBtn:hover {
+.linkBtn2 {
+    display: inline-block;
+    border-radius: 10px;
+    background-color: #f4511e;
+    border: none;
+    color: #FFFFFF;
+    font-size: 18px;
+    width: 100px;
+    height: 65px;
+    transition: all 0.5s;
+    cursor: pointer;
+    outline: none;
+    text-decoration: none;
+    text-align: center;
+    padding-top: 5px;
+}
+.button:hover, .linkBtn:hover, .youtubeBtn:hover, .linkBtn2:hover {
     background-color: #b92626;
     border-radius: 15px;
 }

@@ -18,6 +18,9 @@ $("#searchBtn").on("click", function (event) {
         var artistList = [];
         var albumList = [];
 
+        var arrayCart = [];
+
+
         $.ajax({
             url: queryURL,
             method: "GET"
@@ -44,7 +47,7 @@ $("#searchBtn").on("click", function (event) {
                     $("<td>").text("unknown"),
                     $("<td>").html("<a href='" + theHref + "'" + "target='_blank'" + "class='linkBtn'>" + "Last.fm</a>"),
                     $("<td>").html("<button class='youtubeBtn'>" + "Youtube" + "</button>"),
-                    $("<td>").html("<button class='linkBtn'>" + "Add to Cart" + "</button>")
+                    $("<td>").html("<button" + "  data-id='" + i + "' class='linkBtn2'>" + "Add to Cart" + "</button>")
 
                 );
                 // Append the new row to the table
