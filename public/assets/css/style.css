@@ -4,10 +4,17 @@ body {
     margin: auto;
     margin-top: 10px;
     margin-bottom: 20px;
+<<<<<<< HEAD
     background-image: url("/assets/images/body.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     /* background-color: rgb(39, 39, 39);; */
+=======
+    background-image: url("/images/body.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgb(39, 39, 39);;
+>>>>>>> e0ef80863f282d7076f0300191783aff348e0764
 }
 
 /* NAVBAR */
@@ -54,6 +61,7 @@ body {
     background-color: #b92626;
     border-radius: 15px;
 }
+
     /* SEARCH */
     .search {
         flex:5;
@@ -63,19 +71,33 @@ body {
         text-decoration: none;
         color: antiquewhite;
         font-size: 23px;
-        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-family: 'Oswald', sans-serif;
         letter-spacing: 2px;
         padding: 0px 0px 0px 15px;
     }
     #linksearch:hover {
         color: rgb(241, 178, 95);
     }
+    #aboutLink {
+        text-decoration: none;
+        background-color: gray;
+        color: antiquewhite;
+        font-size: 23px;
+        font-family: 'Oswald', sans-serif;
+        letter-spacing: 2px;
+        padding: 0px 0px 0px 15px;
+        margin-top: 50px;
+    }
+    #aboutLink:hover {
+        color: rgb(63, 61, 61);
+    }
+
     #inputSearch {
         height: 30px;
         margin: 10px;
         width: 350px;
         padding: 10px;
-        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-family: 'Oswald', sans-serif;
         font-size: 15px;
         letter-spacing: 2px;
         outline: none;
@@ -93,7 +115,7 @@ body {
         text-decoration: none;
         color: antiquewhite;
         font-size: 23px;
-        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-family: 'Oswald', sans-serif;
         letter-spacing: 2px;
         padding: 0px 0px 0px 15px;
         margin-right: 5px;
@@ -202,6 +224,11 @@ span.password {
         from {opacity: -0.1}
         to {opacity: 1}
     }
+
+    @keyframes fade {
+        from {opacity: -0.1}
+        to {opacity: 1} 
+    }
     .slideImage {
         width: 300px;
         height: 300px;
@@ -213,7 +240,7 @@ span.password {
         line-height: 30px;
         margin: 0px 20px;
         font-size: 18px;
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-family: 'Oswald', sans-serif;
         font-style: italic;
         letter-spacing: 1.5px;
     }
@@ -223,7 +250,7 @@ span.password {
     color: antiquewhite;
     border-collapse: collapse;
     width: 100%;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Oswald', sans-serif;
     font-size: 18px;
     font-style: oblique;
     margin-top: 20px;

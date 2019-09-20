@@ -1,110 +1,123 @@
 <div class="container">
 
-        <header>
-            <nav class="navBar">
-                <form class="form">
-                    <div class="search">
-                        <a id="linkSearch" href="./index.html">PIED PIPER</a>
-                        <input id="inputSearch" type="search" placeholder="Search by Title or Author">
+    <header>
+        <nav class="navBar">
+            <form class="form">
+                <div class="search">
+<<<<<<< HEAD
+                    <a id="linkSearch" href="./index.handlebars">PIED PIPER</a>
+=======
+                    <a id="linkSearch" href="./index">PIED PIPER</a>
+>>>>>>> 3a63421b528bc91ecf4153bd36fe9fae24496aac
+                    <input id="inputSearch" type="search" placeholder="Search by Title or Author">
+                    <button class="button" id="searchBtn" type="submit"> Search </button>
+                </div>
 
-                        <button class="button" id="searchBtn" type="submit"> Search </button>
+                    <div class="about">
+                        <button class="button" id="about" type="submit" style="background-color: grey"> About </button>
+                        <a id="aboutlink" href="./about.handlebars"></a>
                     </div>
-                    <div class="user">
-                        <div class="user2">
-                            <a id="linkUser" href="cart.html">Cart</a>
-                            <button onclick="document.getElementById('id01')" class="button" id="loginBtn" type="submit"> Login </button>
-
-                            <div id="id01" class="modal">
-                                <form class="modal-content animate">
-
-                                    <div class="Modalcontainer">
-                                        <label for="uname"><b>Username</b></label>
-                                        <input type="text" placeholder="Enter Username">
-
-                                        <label for="psw"><b>Password</b></label>
-                                        <input type="password" placeholder="Enter Password">
-
-                                        <button type="submit">Login</button>
-                                        <label>
-                                            <input type="checkbox" checked="checked"> Remember me
-                                        </label>
-                                    </div>
-
-                                    <div class="Modalcontainer" style="background-color:#f1f1f1">
-                                        <button type="button"
-                                            onclick="document.getElementById('id01').style.display='none'"
-                                            class="cancelbtn">Cancel</button>
-                                    </div>
-
-                                </form>
-                            </div>
-
-                        </div>
+                
+                <div class="user">
+                    <div class="user2">
+                        <button class="button" id="loginBtn" type="submit"> Login </button>
+                        <a id="linkUser" href="cart.html"><i class="fas fa-shopping-cart"></i></a>
                     </div>
-                </form>
-            </nav>
-        </header>
+                </div>
+            </form>
+        </nav>
+    </header>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="container">
+<<<<<<< HEAD
+                <label for="uname" ><b>Username</b></label>
+                <input type="text" id="userName" placeholder="Enter Username" name="uname" required>
+                <br>
+                <label for="psw"><b>Password</b></label>
+                <input type="password" id="password" placeholder="Enter Password" name="psw" required>
+=======
+                <label for="uname"><b>Username</b></label>
+                <input type="text" class="loginUser" placeholder="Enter Username" name="uname" required>
+                <br>
+                <label for="psw"><b>Password</b></label>
+                <input type="password" class="loginPassword" placeholder="Enter Password" name="psw" required>
+>>>>>>> 3a63421b528bc91ecf4153bd36fe9fae24496aac
+                <br>
+                <button class="button" id="modalLoginBtn" type="submit">Login</button>
+                <label>
+                    <input type="checkbox" name="remember"> Remember me
+                </label>
+                <div id="reg-div">
+                    <span class="newAccount">Don't have an Account?<a href="./registration">Sign up now!</a></span>
+                </div>
 
-        <main>
-            <div class="slide-container">
-                <div class="slideshow">
-                    <img id="background" src="/assets/images/background.jpg" alt="guitar">
-                    <div class="images fade">
-                        <img class="slideImage" src="./assets/images/eminem.jpg" alt="eminem">
-                        <div class="description">
-                            <div> ARTIST: Eminem </div>
-                            <div> SONG: Lose Yourself </div>
-                            <div> DESCRIPTION: American Rap song by Eminem from the movie "8 Mile". It is based on
-                                the struggles and life of Eminem, fighting underground rap battles and making it out
-                                of it.</div>
-                        </div>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <div class="slide-container">
+            <div class="slideshow">
+                <img id="background" src="/assets/images/background.jpg" alt="guitar">
+                <div class="images fade">
+                    <img class="slideImage" src="./assets/images/eminem.jpg" alt="eminem">
+                    <div class="description">
+                        <div> ARTIST: Eminem </div>
+                        <div> SONG: Lose Yourself </div>
+                        <div> DESCRIPTION: American Rap song by Eminem from the movie "8 Mile". It is based on
+                            the struggles and life of Eminem, fighting underground rap battles and making it out
+                            of it.</div>
                     </div>
-                    <div class="images fade">
-                        <img class="slideImage" src="./assets/images/marron.jpg" alt="eminem">
-                        <div class="description">
-                            <div> ARTIST: Marron 5 </div>
-                            <div> SONG: Girl Like You </div>
-                            <div> DESCRIPTION: Another song Perfromed by American pop rock band Marron 5. This song
-                                is about thanking the woman in his life and putting up with him through every
-                                challenges.</div>
-                        </div>
+                </div>
+                <div class="images fade">
+                    <img class="slideImage" src="./assets/images/marron.jpg" alt="eminem">
+                    <div class="description">
+                        <div> ARTIST: Marron 5 </div>
+                        <div> SONG: Girl Like You </div>
+                        <div> DESCRIPTION: Another song Perfromed by American pop rock band Marron 5. This song
+                            is about thanking the woman in his life and putting up with him through every
+                            challenges.</div>
                     </div>
-                    <div class="images fade">
-                        <img class="slideImage" src="./assets/images/imagine.jpg" alt="eminem">
-                        <div class="description">
-                            <div> ARTIST: Imagine Dragons </div>
-                            <div> SONG: Natural </div>
-                            <div> DESCRIPTION: This song is performed by American pop rock band Imagine Dragons. The
-                                song is about being cold-hearted in this cold-world and how to fight through it.
-                            </div>
+                </div>
+                <div class="images fade">
+                    <img class="slideImage" src="./assets/images/imagine.jpg" alt="eminem">
+                    <div class="description">
+                        <div> ARTIST: Imagine Dragons </div>
+                        <div> SONG: Natural </div>
+                        <div> DESCRIPTION: This song is performed by American pop rock band Imagine Dragons. The
+                            song is about being cold-hearted in this cold-world and how to fight through it.
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
 
-            <div class="table">
-                <table id="music-table">
-                    <thead>
-                        <tr class="trHead">
-                            <!-- <th class="th" id="th1" scope="col">Images</th> -->
-                            <th class="th"  id="th1" scope="col">Song Title</th>
-                            <th class="th" scope="col">Artist</th>
-                            <th class="th" scope="col">Album</th>
-                            <th class="th" scope="col">Last Fm</th>
-                            <th class="th" scope="col">Youtube</th>
-                        </tr>
-                    </thead>
+        <div class="table">
+            <table id="music-table">
+                <thead>
+                    <tr class="trHead">
+                        <!-- <th class="th" id="th1" scope="col">Images</th> -->
+                        <th class="th" id="th1" scope="col">Song Title</th>
+                        <th class="th" scope="col">Artist</th>
+                        <th class="th" scope="col">Album</th>
+                        <th class="th" scope="col">Last Fm</th>
+                        <th class="th" scope="col">Youtube</th>
+                        <th class="th" scope="col">Cart</th>
+                    </tr>
+                </thead>
 
-                    <tbody id="music-table-body"></tbody>
+                <tbody id="music-table-body"></tbody>
 
-                </table>
-            </div>
+            </table>
+        </div>
 
-        </main>
+    </main>
 
-        <footer>
+    <footer>
 
 
-        </footer>
+    </footer>
 
-    </div>
+</div>
