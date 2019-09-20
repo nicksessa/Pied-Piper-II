@@ -87,7 +87,7 @@ $("#searchBtn").on("click", function (event) {
                 })
                 console.log(arrayCart)
 
-                // localStorage.setItem("piedPiperCart1284", JSON.stringify(arrayCart));
+                localStorage.setItem("piedPiperCart1284", JSON.stringify(arrayCart));
                 // console.log(storage)
             })
         })
