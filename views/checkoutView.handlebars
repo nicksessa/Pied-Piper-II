@@ -72,7 +72,81 @@
           </div>
         </div>
 
-        {{!-- <div class="row py-5 p-4 bg-white rounded shadow-sm">
+        <!-- Second Row goes here if cart is not empty -->
+ 
+      </div>
+    </div>
+  </div>
+
+
+  <script>
+    // the following is an array of objects that contains the items in the user's cart
+    let piedPiperCart1284_ = [
+      {
+        songTitle: "Pied Piper",
+        artistName: "Crispian St Peters",
+        albumName: "Follow Me",
+        youTubeLink: "https://www.youtube.com/watch?v=pG6CN0Dk6os"
+      },
+      {
+        songTitle: "Ring of Fire",
+        artistName: "Johnny Cash",
+        albumName: "Ring of Fire: The Best of Johnny Csah",
+        youTubeLink: "https://www.youtube.com/watch?v=It7107ELQvY"
+      }
+    ]
+
+    //localStorage.setItem("piedPiperCart1284", JSON.stringify(piedPiperCart1284))
+    var piperCart = JSON.parse(localStorage.getItem("piedPiperCart1284"))
+    console.log(piperCart)
+
+    // once we have the array, loop through it to add the data to the page
+    var songTitle = "default - Pied Piper"
+    var artistName = "Chrispian St Peters"
+    var albumName = "Follow Me"
+    var youTubeLink = "https://www.youtube.com/watch?v=pG6CN0Dk6os"
+    var rowString = ""
+
+    if (piperCart !== null && localStorage.piperCart !== '') {
+      // if the cart is not empty display the coupon and summary row
+
+      displaySecondRow()
+
+      // Get the total number of items
+      var numOfItems = piperCart.length
+      console.log(numOfItems)
+
+      var totalPrice = 0;
+      totalPrice = numOfItems * .99
+      $('#totalAmount').html("$" + totalPrice)
+
+      piperCart.forEach(function (arrayItem) {
+        songTitle = arrayItem.songTitle
+        artistName = arrayItem.artistName
+        albumName = arrayItem.albumName
+        youTubeLink = arrayItem.youTubeLink
+        rowString += '<tr>'
+        rowString += '<th scope="row" class="border-0">'
+        rowString += '<div class="p-2">'
+        rowString += '<img class="img-fluid rounded shadow-sm"src="https://www.w3schools.com/w3images/wedding.jpg" width="70" alt="">'
+        rowString += '<div class="ml-3 d-inline-block align-middle">'
+        rowString += '<h5 class="mb-0"> <a href="' + youTubeLink + '" class="text-dark d-inline-block align-middle" target="_blank">'
+        rowString += songTitle + '</a></h5><span class="text-muted font-weight-normal font-italic d-block">Artist: ' + artistName + '</span><span class="text-muted font-weight-normal d-block">Album: ' + albumName + ' </span>'
+        rowString += '</div></div></th>'
+        rowString += '<td class="border-0 align-middle"><strong>$0.99</strong></td>'
+        rowString += '<td class="border-0 align-middle"><a href="#" class="text-dark"><i class="fa fa-trash"></i></a></td></tr>'
+      })
+      //console.log(rowString)
+      $("#cartTable").append(rowString);
+    } else {
+      console.log("cart is empty")
+      rowString = `<tr><td colspan="3" class="border-0 align-middle text-center">((( Cart is Empty )))</td></tr>`
+      $("#cartTable").append(rowString);
+    }
+
+    
+    function displaySecondRow () {
+      var secondRowString = `<div class="row py-5 p-4 bg-white rounded shadow-sm">
           <div class="col-lg-6">
             <div class="bg-light rounded-pill px-4 py-3 text-uppercase font-weight-bold">Coupon code</div>
             <div class="p-4">
@@ -111,70 +185,10 @@
               </ul><a href="#" class="btn btn-dark rounded-pill py-2 btn-block">Procceed to checkout</a>
             </div>
           </div>
-        </div> --}}
-      </div>
-    </div>
-  </div>
+        </div>`
+      $(".row").append(secondRowString)
+    }
 
-
-  <script>
-
-    //var piperCart = localStorage.getItem("piedPiperCart1284")
-    // the following is an array of objects that contains the items in the user's cart
-
-    let piperCart = [
-      {
-        songTitle: "Pied Piper",
-        artistName: "Crispian St Peters",
-        albumName: "Follow Me",
-        youTubeLink: "https://www.youtube.com/watch?v=pG6CN0Dk6os"
-      },
-      {
-        songTitle: "Ring of Fire",
-        artistName: "Johnny Cash",
-        albumName: "Ring of Fire: The Best of Johnny Csah",
-        youTubeLink: "https://www.youtube.com/watch?v=It7107ELQvY"
-      }
-    ]
-
-    // once we have the array, loop through it to add the data to the page
-
-    var songTitle = "default - Pied Piper"
-    var artistName = "Chrispian St Peters"
-    var albumName = "Follow Me"
-    var youTubeLink = "https://www.youtube.com/watch?v=pG6CN0Dk6os"
-    var rowString = ""
-
-    // total the amount of items
-    var numOfItems = piperCart.length
-    //console.log(numOfItems)
-    var totalPrice = 0;
-    totalPrice = numOfItems * .99
-    $('#totalAmount').html("$" + totalPrice)
-
-    piperCart.forEach(function (arrayItem) {
-      songTitle = arrayItem.songTitle
-      artistName = arrayItem.artistName
-      albumName = arrayItem.albumName
-      youTubeLink = arrayItem.youTubeLink
-
-      rowString += '<tr>'
-      rowString += '<th scope="row" class="border-0">'
-      rowString += '<div class="p-2">'
-      rowString += '<img class="img-fluid rounded shadow-sm"src="https://www.w3schools.com/w3images/wedding.jpg" width="70" alt="">'
-      rowString += '<div class="ml-3 d-inline-block align-middle">'
-      rowString += '<h5 class="mb-0"> <a href="' + youTubeLink + '" class="text-dark d-inline-block align-middle" target="_blank">'
-      rowString += songTitle + '</a></h5><span class="text-muted font-weight-normal font-italic d-block">Artist: ' + artistName + '</span><span class="text-muted font-weight-normal d-block">Album: ' + albumName + ' </span>'
-      rowString += '</div></div></th>'
-      rowString += '<td class="border-0 align-middle"><strong>$0.99</strong></td>'
-      rowString += '<td class="border-0 align-middle"><a href="#" class="text-dark"><i class="fa fa-trash"></i></a></td></tr>'
-
-
-
-    })
-    //console.log(rowString)
-
-    $("#cartTable").append(rowString);
 
   </script>
 </body>
