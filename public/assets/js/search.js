@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
 
-$("#searchBtn").on("click", function (event) {
+    $("#searchBtn").on("click", function (event) {
         event.preventDefault();
         console.log("you clicked")
 
@@ -88,10 +88,14 @@ $("#searchBtn").on("click", function (event) {
                     Artist: (artistList[cartAttr]).split('+').join(' '),
                     Album: (albumList[cartAttr]).split('+').join(' '),
                 })
-                console.log(arrayCart)
+                // console.log(arrayCart)
 
-                // localStorage.setItem("piedPiperCart1284", JSON.stringify(arrayCart));
-                // console.log(storage)
+                for (var j = 0; j < arrayCart.length; j++) {
+                    localStorage.setItem("piedPiperCart1284", JSON.stringify(arrayCart[j]));
+                    // console.log(localStorage)
+                    var parse = JSON.parse(localStorage.getItem("piedPiperCart1284"));
+                    console.log(parse);
+                }
             })
         })
     })
@@ -112,7 +116,7 @@ $("#searchBtn").on("click", function (event) {
         var youTubeApiKey = "AIzaSyBdKCyg7sttppX9lC9j18Rpdz99RddVhXA"
         var queryURL = " https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=" + newSongTitle + newArtistName + "&topicId=%2Fm%2F04rlf&type=video&key=" + youTubeApiKey;
         console.log("youTube URL: " + queryURL)
-        
+
         $.ajax({
             url: queryURL,
             method: "GET"
@@ -153,8 +157,8 @@ $("#searchBtn").on("click", function (event) {
                 $("<li></li>").text("Like count: " + response.items[0].statistics.likeCount).appendTo("#video-output");
                 $("<li></li>").text("Dislike count: " + response.items[0].statistics.dislikeCount).appendTo("#video-output");
                 $("<li></li>").html("<a href='" + videoLink + "'" + "target='_blank'" + "class='btn button'>" + "YouTube LINK!</a>").appendTo("#video-output");
-            });  
-        });  
-    });  
-    
-    })
+            });
+        });
+    });
+
+})
