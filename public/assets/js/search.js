@@ -1,8 +1,11 @@
 $(document).ready(function () {
+    function clear() {
+        $("#music-table-body").empty();
+    }
 
-
-$("#searchBtn").on("click", function (event) {
+    $("#searchBtn").on("click", function (event) {
         event.preventDefault();
+        clear();
         console.log("you clicked")
 
         var songString = $("#inputSearch").val().trim();
@@ -20,7 +23,7 @@ $("#searchBtn").on("click", function (event) {
 
         $.ajax({
             url: queryURL,
-            method: "GET"
+            method: "GET" 
         }).then(function (response) {
             // take first best match and put it in the variable that we will use for the youtube api
             topTitleMatch = response.results.trackmatches.track[0].name
@@ -44,7 +47,7 @@ $("#searchBtn").on("click", function (event) {
                     $("<td>").text("unknown"),
                     $("<td>").html("<a href='" + theHref + "'" + "target='_blank'" + "class='linkBtn'>" + "Last.fm</a>"),
                     $("<td>").html("<button class='youtubeBtn'>" + "Youtube" + "</button>"),
-                    $("<td>").html("<button class='linkBtn'>" + "Add to Cart" + "</button>")
+                    $("<td>").html("<button class='button' id='cartBtn'>" + "Add to Cart" + "</button>")
 
                 );
                 // Append the new row to the table
@@ -94,7 +97,7 @@ $("#searchBtn").on("click", function (event) {
         var youTubeApiKey = "AIzaSyBdKCyg7sttppX9lC9j18Rpdz99RddVhXA"
         var queryURL = " https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=" + newSongTitle + newArtistName + "&topicId=%2Fm%2F04rlf&type=video&key=" + youTubeApiKey;
         console.log("youTube URL: " + queryURL)
-        
+
         $.ajax({
             url: queryURL,
             method: "GET"
@@ -106,6 +109,7 @@ $("#searchBtn").on("click", function (event) {
             videoLink = "https://www.youtube.com/watch?v=" + youTubeVideoID;
             console.log(youTubeVideoID)
             console.log("<<>> this is the youtube link -->>>  " + videoLink)
+            window.location = videoLink;
 
             // var newRow2 = $("<tr>").attr('class', 'trBody').append(
             //     // $("<td>").html("<button class='youtubeBtn'>" + "Youtube" + "</button>")
@@ -135,8 +139,8 @@ $("#searchBtn").on("click", function (event) {
                 $("<li></li>").text("Like count: " + response.items[0].statistics.likeCount).appendTo("#video-output");
                 $("<li></li>").text("Dislike count: " + response.items[0].statistics.dislikeCount).appendTo("#video-output");
                 $("<li></li>").html("<a href='" + videoLink + "'" + "target='_blank'" + "class='btn button'>" + "YouTube LINK!</a>").appendTo("#video-output");
-            });  
-        });  
-    });  
-    
-    })
+            });
+        });
+    });
+
+})

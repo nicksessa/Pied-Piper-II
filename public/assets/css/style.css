@@ -267,3 +267,11 @@ span.password {
     color: white;
 }
 
+#cartBtn{
+    font-size: 15px;
+    padding-bottom: 2px;
+}
+
+#about{
+    margin-top: 16px;
+}

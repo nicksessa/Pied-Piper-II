@@ -18,6 +18,14 @@ router.post("/api/piedPiperCart", function(req, res) {
   });
 });
 
+router.post("/api/piedPiperUsers", function (req, res){
+  piper.create(["user_name", "password"], [req.body.user_name, req.body.password], function(result){
+    res.json({is: result.insertId});
+  })
+})
+
+
+
 router.put("/api/burgers/:id", function(req, res) {
   var condition = "id = " + req.params.id;
 
