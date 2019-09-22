@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
 
-$("#searchBtn").on("click", function (event) {
+    $("#searchBtn").on("click", function (event) {
         event.preventDefault();
         console.log("you clicked")
 
@@ -17,6 +17,9 @@ $("#searchBtn").on("click", function (event) {
         var trackList = [];
         var artistList = [];
         var albumList = [];
+
+        var arrayCart = [];
+
 
         $.ajax({
             url: queryURL,
@@ -44,7 +47,7 @@ $("#searchBtn").on("click", function (event) {
                     $("<td>").text("unknown"),
                     $("<td>").html("<a href='" + theHref + "'" + "target='_blank'" + "class='linkBtn'>" + "Last.fm</a>"),
                     $("<td>").html("<button class='youtubeBtn'>" + "Youtube" + "</button>"),
-                    $("<td>").html("<button class='linkBtn'>" + "Add to Cart" + "</button>")
+                    $("<td>").html("<button" + "  data-id='" + i + "' class='linkBtn2'>" + "Add to Cart" + "</button>")
 
                 );
                 // Append the new row to the table
@@ -75,6 +78,26 @@ $("#searchBtn").on("click", function (event) {
                     albumList.push(albumName)
                 });
             }
+            $(document).on("click", ".linkBtn2", function (event) {
+                console.log("You clicked cart Btn");
+
+                var cartAttr = $(this).data().id;
+
+                arrayCart.push({
+                    Song: (trackList[cartAttr]).split('+').join(' '),
+                    Artist: (artistList[cartAttr]).split('+').join(' '),
+                    Album: (albumList[cartAttr]).split('+').join(' '),
+                })
+
+                // console.log(arrayCart)
+
+                for (var j = 0; j < arrayCart.length; j++) {
+                    localStorage.setItem("piedPiperCart1284", JSON.stringify(arrayCart[j]));
+                    // console.log(localStorage)
+                    var parse = JSON.parse(localStorage.getItem("piedPiperCart1284"));
+                    console.log(parse);
+                }
+            })
         })
     })
 
@@ -94,7 +117,7 @@ $("#searchBtn").on("click", function (event) {
         var youTubeApiKey = "AIzaSyBdKCyg7sttppX9lC9j18Rpdz99RddVhXA"
         var queryURL = " https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=" + newSongTitle + newArtistName + "&topicId=%2Fm%2F04rlf&type=video&key=" + youTubeApiKey;
         console.log("youTube URL: " + queryURL)
-        
+
         $.ajax({
             url: queryURL,
             method: "GET"
@@ -135,8 +158,8 @@ $("#searchBtn").on("click", function (event) {
                 $("<li></li>").text("Like count: " + response.items[0].statistics.likeCount).appendTo("#video-output");
                 $("<li></li>").text("Dislike count: " + response.items[0].statistics.dislikeCount).appendTo("#video-output");
                 $("<li></li>").html("<a href='" + videoLink + "'" + "target='_blank'" + "class='btn button'>" + "YouTube LINK!</a>").appendTo("#video-output");
-            });  
-        });  
-    });  
-    
-    })
+            });
+        });
+    });
+
+})

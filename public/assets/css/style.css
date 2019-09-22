@@ -7,7 +7,7 @@ body {
     background-image: url("/images/body.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: rgb(39, 39, 39);;
+    /* background-color: rgb(39, 39, 39);; */
 }
 
 /* NAVBAR */
@@ -73,7 +73,23 @@ body {
     background-color: rgb(65, 64, 64);
 }
 
-.button:hover, .linkBtn:hover, .youtubeBtn:hover {
+.linkBtn2 {
+    display: inline-block;
+    border-radius: 10px;
+    background-color: #f4511e;
+    border: none;
+    color: #FFFFFF;
+    font-size: 18px;
+    width: 100px;
+    height: 65px;
+    transition: all 0.5s;
+    cursor: pointer;
+    outline: none;
+    text-decoration: none;
+    text-align: center;
+    padding-top: 5px;
+}
+.button:hover, .linkBtn:hover, .youtubeBtn:hover, .linkBtn2:hover {
     background-color: #b92626;
     border-radius: 15px;
 }
@@ -278,4 +294,24 @@ span.password {
     background-color: rgb(31, 30, 30);
     color: white;
 }
-
+.footer {
+    height: 100px;
+        border-top: 4px solid rgb(255, 170, 66);
+        padding: 25px;
+        background-color: rgb(63, 62, 62);
+        color: antiquewhite;
+        font-size: 12px;
+        font-size: 15px;
+        width: 100%;
+        display: inline-block;
+}
+.footer a {
+    text-decoration: none;
+    color: antiquewhite;
+}
+.footer a:hover {
+    color: rgb(255, 170, 66);
+}
+.span {
+    color: #f4511e;
+}
