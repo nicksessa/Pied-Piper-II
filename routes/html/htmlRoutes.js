@@ -12,6 +12,12 @@ router
     res.render("checkoutView");
   });
 
+  router
+  .route("/about")
+  .get(function (req, res) {
+    res.render("about");
+  });
+
 router
   .route("/receipt")
   .get(function (req, res) {
