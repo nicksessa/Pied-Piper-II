@@ -1,11 +1,33 @@
 <div class="container">
 
-    
+    {{!-- <header>
+        <nav class="navBar">
+            <form class="form">
+                <div class="search">
+                    <a id="linkSearch" href="./index.handlebars">PIED PIPER</a>
+                    <input id="inputSearch" type="search" placeholder="Search by Title or Author">
+                    <button class="button" id="searchBtn" type="submit"> Search </button>
+                </div>
+
+                <div class="about">
+                    <button class="button" id="about" type="submit" style="background-color: grey"> About </button>
+                    <a id="aboutlink" href="./about.handlebars"></a>
+                </div>
+
+                <div class="user">
+                    <div class="user2">
+                        <button class="button" id="loginBtn" type="submit"> Login </button>
+                        <a id="linkUser" href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+                    </div>
+                </div>
+            </form>
+        </nav>
+    </header>
     <div id="myModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
             <div class="container">
-                <label for="uname" ><b>Username</b></label>
+                <label for="uname"><b>Username</b></label>
                 <input type="text" id="userName" placeholder="Enter Username" name="uname" required>
                 <br>
                 <label for="psw"><b>Password</b></label>
@@ -21,23 +43,26 @@
 
             </div>
         </div>
-    </div>
+    </div> --}}
 
-    <main>
-        <div class="slide-container">
-            <div class="slideshow">
-                <img id="background" src="/assets/images/background.jpg" alt="guitar">
-                <div class="images fade">
-                    
-                    </div>
-                </div>
-            </div>
-        
-    </main>
+ <main>
+    <div class="description">
+        <img src="../public/assets/images/oldpp.JPG">
+            <br>
+                <ul>
+                Since Pied Piper BETA, we've added databases to the backend to take in User Info, Inventory
+                Information, and Shopping Cart Data.
+                </ul>
+            <br>
+                 <ul>
+                 Improved the Youtube API so that it would not automatically just play the most popular song 
+                 by a given name and allow for the user to select the version of the song they want. It searches 
+                 by Artist and Song rather than just Song.
+                </ul>
+            <br>
+        <img src="../public/assets/images/newpp.JPG">
+    </div>  
+</main>
 
-    <footer>
 
 
-    </footer>
-
-</div>
