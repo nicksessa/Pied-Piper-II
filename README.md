@@ -4,6 +4,12 @@
 
 An eMusic online store which utilizes an MVC layout which calls two external APIs (LastFM and YouTube), has hooks into a MySql database and is deployed on Heroku.
 
+# Project 1 Old Version of Pied Version:
+![image](https://github.com/nicksessa/Pied-Piper-II/blob/master/public/assets/images/oldpp.JPG) 
+
+# Project 2 Updated Pied Piper:
+![image](https://github.com/nicksessa/Pied-Piper-II/blob/master/public/assets/images/newpp.JPG) 
+
 ## Usage
 
 When the user clicks on or types the main URL, they are presented with the main page.
